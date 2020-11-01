@@ -1,0 +1,26 @@
+<div class=" jumbtron">
+    <h1 class="display-4 text-center">users info</h1>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">post Id </th>
+            <th scope="col">id</th>
+            <th scope="col">name </th>
+            <th scope="col">email</th>
+            <th scope="col">body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of PostArr">
+            <td>{{item.postID}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.body}}</td>
+            <td> <button (click)='deletePost(item)' class="btn btn-danger">Delete</button> </td>
+        </tr>
+
+    </tbody>
+</table>

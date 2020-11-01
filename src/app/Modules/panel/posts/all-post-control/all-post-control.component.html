@@ -1,0 +1,9 @@
+<form method="post" class="form-group" id="loginForm" [formGroup]='AddUpdateFrom'>
+
+    <input type="text" class="form-control" formControlName='userId' #Userid placeholder="Userid">
+    <input type="text" class="form-control" formControlName='id' #id placeholder="Id">
+    <input type="text" class="form-control" formControlName='title' #title placeholder="Title">
+    <input type="text" class="form-control" formControlName='body' #body placeholder="Body">
+    <button class="form-control" (click)='CreatePost(Userid,id,title,body)'>CreatePost</button>
+    <button class="form-control" (click)='updatePost(Userid,id,title,body)'>Update Post</button>
+</form>

@@ -1,0 +1,32 @@
+<!-- <ul class="list-group" *ngFor="let item of PostArr">
+    <li class="list-group-item">{{item.userId}}</li>
+    <li class="list-group-item">{{item.id}}</li>
+    <li class="list-group-item">{{item.title}}</li>
+    <li class="list-group-item">{{item.body}}</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+</ul> -->
+
+<div class=" jumbtron">
+    <h1 class="display-4 text-center">users info</h1>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">user id </th>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of PostArr">
+            <td>{{item.userId}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+            <td> <button (click)='deletePost(item)' class="btn btn-danger">Delete</button> </td>
+        </tr>
+
+    </tbody>
+</table>

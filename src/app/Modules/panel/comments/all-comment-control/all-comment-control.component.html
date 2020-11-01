@@ -1,0 +1,10 @@
+<form method="post" class="form-group" [formGroup]='commentForm'>
+
+    <input type="text" class="form-control" formControlName='userId' #Userid placeholder="Userid">
+    <input type="text" class="form-control" formControlName='id' #id placeholder="Id">
+    <input type="text" class="form-control" formControlName='name' #name placeholder="name">
+    <input type="text" class="form-control" formControlName='email' #email placeholder="email">
+    <input type="text" class="form-control" formControlName='body' #body placeholder="Body">
+    <button class="form-control" (click)='Createcomment(Userid,id,name,email,body)'>createComment</button>
+    <button class="form-control" (click)='updatecomment(Userid,id,name,email,body)'>Update Post</button>
+</form>
