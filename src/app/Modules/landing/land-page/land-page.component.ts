@@ -11,13 +11,20 @@ export class LandPageComponent implements OnInit {
   constructor(public HTTP:HTTPService) { }
 PostArr:any = [];
   ngOnInit(): void {
-    this.LoadData()
+    this.LoadData();
   }
 
   LoadData(){
     this.HTTP.getPosts().subscribe(data => {
       this.PostArr = data;
     })
+  }
+
+  checkUSer():boolean{
+    if(!localStorage.getItem('user')){
+      return false;
+    }
+    return true;
   }
 
 }

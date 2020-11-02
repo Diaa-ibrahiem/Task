@@ -7,16 +7,13 @@ import { LandingModule } from './Modules/landing/landing.module';
 import { PanelModule } from './Modules/panel/panel.module';
 import { HTTPService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
-// import { AngularFireModule } from '@angular/fire';
-// import { AngularFireAuthModule } from "@angular/fire/auth";
-// import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     
   ],
   imports: [
@@ -25,11 +22,8 @@ import { LoginComponent } from './login/login.component';
     LandingModule,
     PanelModule,
     HttpClientModule,
-    // // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireAuthModule,
-    // AngularFirestoreModule,
-    // AngularFireAuth
-  ],
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,  ],
   providers: [HTTPService],
   bootstrap: [AppComponent]
 })
